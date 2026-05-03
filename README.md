@@ -1,4 +1,4 @@
 # Portfolio Zeid Ibraheem
-Mon Portfolio 2026,  Zeid Ibraheem.
+Mon Portfolio RT 2026,  Zeid Ibraheem.
 
-https://seldomzed.github.io/portfolioZed/
+https://seldomzed.github.io/portfolio-rt
