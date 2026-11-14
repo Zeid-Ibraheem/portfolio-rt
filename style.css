@@ -1777,3 +1777,26 @@ section {
         font-size: 1.2rem;
     }
 }
+
+/* ─── CENTRES D'INTÉRÊT ─── */
+.interests-section {
+    margin-top: 40px;
+}
+
+.interest-cards {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.interest-cards .language-card p {
+    margin-bottom: 0;
+}
+
+.ref-disponible p strong {
+    color: var(--text-bright);
+}
+
+@media (max-width: 1024px) {
+    .interest-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
