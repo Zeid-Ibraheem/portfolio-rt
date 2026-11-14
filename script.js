@@ -142,7 +142,7 @@ document.querySelectorAll('section, .stat-card, .skill-card, .project-card, .tim
 
 // Trigger initial tab bars
 setTimeout(() => {
-    animateSkillBars(document.getElementById('tab-cyber'));
+    animateSkillBars(document.querySelector('.tab-content.active'));
 }, 500);
 
 // ─── COUNTER ANIMATION ───
@@ -196,16 +196,18 @@ function handleFormSubmit() {
         return;
     }
 
-    // Show success (in real deployment, send via emailjs or formspree)
-    document.getElementById('form-success').style.display = 'block';
-    document.getElementById('name').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('subject').value = '';
-    document.getElementById('message').value = '';
+    // Pas de serveur derrière ce site : on ouvre la messagerie du visiteur avec le message déjà rempli.
+    const lien = document.querySelector('a[href^="mailto:"]');
+    const destinataire = lien ? lien.getAttribute('href').replace('mailto:', '').split('?')[0] : '';
+    const corps = message + '\n\n' + name + '\n' + email;
+    window.location.href = 'mailto:' + destinataire +
+        '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(corps);
 
+    // Les champs restent remplis, au cas où la messagerie ne s'ouvrirait pas.
+    document.getElementById('form-success').style.display = 'block';
     setTimeout(() => {
         document.getElementById('form-success').style.display = 'none';
-    }, 4000);
+    }, 8000);
 }
 
 // ─── TYPING EFFECT on section titles ───

@@ -2,6 +2,8 @@
 
 Mon portfolio de BUT Réseaux & Télécommunications : profil, compétences, projets, expériences, formation, et un formulaire pour me contacter.
 
+**Je cherche un stage de 10 semaines, du 12 avril au 18 juin 2027 : réseaux, systèmes, sécurité ou informatique.**
+
 **Voir le site : https://zeid-ibraheem.github.io/portfolio-rt/**
 
 <p align="center">
